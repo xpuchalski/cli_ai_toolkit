@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Toolkit - Web Interface</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>AI Toolkit</h1>
+      <p class="subtitle">Web-based interface for AI-powered tools</p>
+    </header>
+
+    <nav class="nav">
+      <button class="nav-btn active" data-section="tools">Tools</button>
+      <button class="nav-btn" data-section="about">About</button>
+    </nav>
+
+    <main class="main">
+      <div class="main-layout">
+        <div class="content-panel">
+          <!-- Tools Section -->
+          <section id="tools" class="section active">
+            <h2>Available Tools</h2>
+            <div class="tools-grid" id="toolsGrid">
+              <!-- Tools will be loaded here -->
+            </div>
+          </section>
+
+          <!-- Coming Soon Section -->
+          <section id="comingSoon" class="section">
+            <div class="coming-soon">
+              <h2>Coming Soon</h2>
+              <p>
+                The selected tool will launch in your CLI. Please check your terminal
+                for the tool output.
+              </p>
+              <p class="note">
+                Note: Each tool runs in the CLI environment. Use the command-line
+                interface for the full interactive experience.
+              </p>
+            </div>
+          </section>
+
+          <!-- About Section -->
+          <section id="about" class="section">
+            <h2>About AI Toolkit</h2>
+            <div class="about-content">
+              <h3>Features</h3>
+              <ul>
+                <li>
+                  <strong>Web Search Agent:</strong> Search the web and generate
+                  research documents
+                </li>
+                <li>
+                  <strong>Image Generation:</strong> Generate images using OpenAI
+                  DALL-E
+                </li>
+                <li>
+                  <strong>Design Feedback:</strong> Screenshot websites and get AI
+                  design feedback
+                </li>
+              </ul>
+
+              <h3>How to Use</h3>
+              <ol>
+                <li>Click on a tool from the Tools section</li>
+                <li>Follow the prompts in your terminal</li>
+                <li>Results will be saved to output directories</li>
+              </ol>
+
+              <h3>Output Directories</h3>
+              <ul>
+                <li><code>references/</code> - Web search results</li>
+                <li><code>references/ai_feedback/</code> - Design feedback</li>
+                <li><code>images/</code> - Generated images</li>
+              </ul>
+
+              <h3>Version</h3>
+              <p>AI Toolkit v1.0.0</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="cli-panel">
+          <div class="cli-header">
+            <span class="cli-title">CLI Output</span>
+            <button class="cli-clear" onclick="clearCLI()">Clear</button>
+          </div>
+          <div class="cli-content" id="cliOutput">
+            <div class="cli-line">Welcome to AI Toolkit</div>
+            <div class="cli-line">Type 'help' for available commands</div>
+          </div>
+          <div class="cli-input-line">
+            <span class="cli-prompt">> </span>
+            <input type="text" class="cli-input" id="cliInput" placeholder="Enter command..." />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        AI Toolkit |
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

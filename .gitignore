@@ -1,0 +1,9 @@
+node_modules/
+.env
+api_keys.env
+images/*
+!images/.gitkeep
+references/*
+!references/.gitkeep
+references/ai_feedback/*
+!references/ai_feedback/.gitkeep

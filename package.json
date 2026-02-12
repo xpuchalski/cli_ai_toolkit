@@ -1,0 +1,21 @@
+{
+  "name": "ai-toolkit",
+  "version": "1.0.0",
+  "description": "CLI AI Toolkit with web search, image generation, and design feedback",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node tools/webInterface.js",
+    "cli": "node menu.js",
+    "web-search": "node tools/webSearch.js",
+    "generate-image": "node tools/generateImage.js",
+    "design-feedback": "node tools/designFeedback.js",
+    "web-interface": "node tools/webInterface.js"
+  },
+  "dependencies": {
+    "openai": "^4.28.4",
+    "dotenv": "^16.3.1",
+    "playwright": "^1.40.0",
+    "@google/generative-ai": "^0.3.0"
+  }
+}
